@@ -1,26 +1,40 @@
 # chat-space
 
-|Chats|
-|:---:|
-|text |
-|member_id |
+##chatsテーブル
+|column|type|
+|:---:|:---:|
+|text |text|
+|user_group_id|references|
 
-|Groups|
-|:----:|
-| name |
-|user_id|
+*User-groupsテーブルとアソシエーションをするので、外部キー制約*
+
+##groupsテーブル
+|column|type|
+|:----:|:--:|
+| name |string|
+*nameカラムにNULL NOT制約を実装*
 
 
-|Usres|
-|:---:|
-|name|
+##Usersテーブル
+|column|type|
+|:---:|:---:|
+|name|string|
+*nameカラムにNULL NOT制約を実装*
 
-|Group_users|
-|:---------:|
-|group_id|
-|user_id|
+##User-groupsテーブル
+|column|type|
+|:----:|:---:|
+|group_id|references|
+|user_id|references|
 
-|Images|
-|:----:|
-|image|
-|group_users_id|
+*UsersテーブルとGroupsテーブルとアソシエーションをするので、外部キー制約*
+
+
+
+##Imagesテーブル
+|column|type|
+|:----:|:--:|
+|image|text|
+|user_group_id|references|
+
+*User-groupsテーブルとアソシエーションをするので、外部キー制約*
