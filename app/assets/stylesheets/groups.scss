@@ -1,0 +1,165 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body{
+  height: 100%;
+}
+
+header{
+  height: 28px;
+  background-color: #38AEF0;
+}
+
+.header-text{
+  color: white;
+  text-align: center;
+}
+.contents{
+  height: 100%;
+}
+
+.groups{
+  height: 100%;
+  width: 300px;
+  float: left;
+}
+
+.group-user-name{
+  background-color: #253141;
+  height: 96px;
+  padding: 0 20px;
+}
+
+.user-name{
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+  float: left;
+}
+i{
+  margin: 40px 0;
+  float: right;
+}
+
+.groups-names{
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  background-color: #2f3e51;
+}
+
+.group-name{
+  font-size: 15px;
+  color: #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.group-messages{
+  color: #FFFFFF;
+  font-size: 11px;
+  padding-bottom: 40px;
+}
+
+.chats{
+  height: 100%;
+  margin-left: 300px;
+  }
+
+.chatsgroup-name{
+  height: 96px;
+  border-color: #eeeeee;
+  padding-left: 40px;
+}
+
+.chat-group-name{
+  font-size: 20px;
+  color: #333333;
+  padding-top: 35px;
+  float: left;
+}
+
+.chat-group-memmber{
+  height: 12px;
+  font-size: 12px;
+  color: #999999;
+  clear: right;
+}
+
+.chat-group-bottom{
+  float: right;
+  height: 40px;
+  width: 40px;
+  margin-top: 28px;
+  border-color: #38AEF0;
+  margin-right: 40px;
+  border-style: solid;
+}
+
+.chats-messages{
+  background-color: #AAAAAA;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.chats-messages-groups{
+  padding-top: 46px;
+}
+
+.chat-messages{
+  padding-bottom: 40px;
+}
+
+.chat-messages-name{
+  font-wight: bold;
+  font-size: 16px;
+  color: #434A54;
+  float: left;
+}
+
+.chat-messages-time{
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+  float: left;
+}
+
+.chat-messages-text{
+  font-size: 14px;
+  color: #434A54;
+}
+
+.clearfix:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.chats-post{
+  padding-left: 40px;
+  height: 50px;
+  width: 70%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.chats-post-text{
+  font-size: 16px;
+  color: #434A54;
+  padding-left: 10px;
+  float: left;
+}
+
+.chats-post-bottom{
+  float: right;
+  margin-right: 40px;
+  margin-left: 15px;
+  height: 50px;
+  background-color: #38AEF0;
+}
