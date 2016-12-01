@@ -1,0 +1,100 @@
+html, body, .contents, .group, .chats, .chats-messages{
+  height: 100%;
+}
+
+
+header, .chats-post-bottom{
+  background-color: $blue-color;
+}
+
+.group-name, .group-messages{
+  color: #FFFFFF;
+}
+
+
+header{
+  .header-text{
+    color: white;
+    text-align: center;
+  }
+}
+
+
+.chats{
+  margin-left: 300px;
+  .chatsgroup-name{
+    border-color: #eeeeee;
+    padding-left: 40px;
+  }
+    .chat-group-name{
+      font-size: 20px;
+      color: #333333;
+      padding-top: 35px;
+      float: left;
+    }
+    .chat-group-bottom{
+      height: 40px;
+      width: 40px;
+      float: right;
+      margin-top: 28px;
+      margin-right: 40px;
+      border-style: solid;
+      border-color: $blue-color;
+    }
+    .chat-group-member{
+      font-size: 12px;
+      margin-top: 15px;
+      padding-bottom: 4px;
+      color: #999999;
+      clear: right;
+    }
+  .chats-messages{
+    background-color: #AAAAAA;
+    padding-left: 40px;
+    padding-right: 40px;
+    .chats-messages-groups{
+      padding-top: 46px;
+    }
+      .chat-messages{
+        padding-bottom: 40px;
+      }
+        .chat-messages-name{
+          font-wight: bold;
+          color: #434A54;
+          font-size: 16px;
+          float: left;
+        }
+        .chat-messages-time{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+          float: left;
+        }
+        .chat-messages-text{
+          font-size: 14px;
+          color: #434A54;
+        }
+    .chats-post{
+      height: 50px;
+      width: 70%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 40px;
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+    }
+      .chats-post-text{
+        font-size: 16px;
+        color: #434A54;
+        padding-left: 10px;
+        float: left;
+      }
+      .chats-post-bottom{
+        height: 50px;
+        float: right;
+        margin-right: 40px;
+        margin-left: 15px;
+      }
+  }
+}

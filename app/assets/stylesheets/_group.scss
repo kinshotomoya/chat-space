@@ -1,0 +1,36 @@
+.group{
+  width: 300px;
+  float: left;
+  .group-user-name{
+    background-color: #253141;
+    height: 96px;
+    padding: 0 20px;
+  }
+    .user-name{
+      font-weight: bold;
+      color: #FFFFFF;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      float: left;
+    }
+    i{
+      margin: 40px 0;
+      float: right;
+    }
+  .groups-names{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    background-color: #2f3e51;
+  }
+    .group-name{
+      font-size: 15px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+    }
+    .group-messages{
+    font-size: 11px;
+    padding-bottom: 40px;
+    }
+}
+
