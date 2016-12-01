@@ -2,6 +2,15 @@ html, body, .contents, .group, .chats, .chats-messages{
   height: 100%;
 }
 
+html{
+  overflow: auto;
+
+}
+body{
+  position: relative;
+  overflow: hidden;
+}
+
 
 header, .chats-post-bottom{
   background-color: $blue-color;
@@ -52,10 +61,10 @@ header{
     }
   .chats-messages{
     background-color: #FAFAFA;
-    padding-left: 40px;
-    padding-right: 40px;
     .chats-messages-groups{
       padding-top: 46px;
+      padding-right: 40px;
+      padding-left: 40px;
     }
       .chat-messages{
         padding-bottom: 40px;
@@ -72,32 +81,46 @@ header{
           margin-left: 10px;
           float: left;
         }
+      .each-chat-messages{
+        margin-bottom: 40px;
+      }
         .chat-messages-text{
           font-size: 14px;
           color: #434A54;
         }
     .chats-post{
-      line-height: 50px;
-      width: 70%;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      height: 50px;
+      width: 75%;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       padding-left: 40px;
       position: absolute;
-      bottom: 0;
-      background-color: white;
+      bottom: 0px;
+      background-color: #AAAAAA;
     }
       .chats-post-text{
+        line-height: 50px;
+        width: 88%;
         font-size: 16px;
-        color: #434A54;
+        background-color: white;
+        color: #AAAAAA;
         padding-left: 10px;
         float: left;
+        display: block;
+      }
+      .fa-picture-o{
+        line-height: 50px;        float: right;
+        padding-right: 10px;
+        color: black;
       }
       .chats-post-bottom{
         line-height: 50px;
-        float: right;
         padding-right: 25px;
         padding-left: 25px;
+        margin-left: 15px;
         color: white;
+        float: right;
       }
   }
 }

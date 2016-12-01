@@ -24,18 +24,24 @@
     .chats-messages
       .chats-messages-groups
         .chat-messages
-          %p.chat-messages-name tomoya
-          %span.chat-messages-time 2016/10/02 06:28:22
+          %span.chat-messages-name tomoya
+          %p.chat-messages-time 2016/10/02 06:28:22
+        .each-chat-messages
           %p.chat-messages-text こんにちは
         .chat-messages
           %p.chat-messages-name tomoya
           %span.chat-messages-time 2016/10/02 06:28:22
+        .each-chat-messages
           %p.chat-messages-text こんにちは
         .chat-messages
           %p.chat-messages-name tomoya
           %span.chat-messages-time 2016/10/02 06:28:22
+        .each-chat-messages
           %p.chat-messages-text こんにちは
       .chats-post
-        %p.chats-post-text type a messages
+        .chats-post-text
+          %p.chats-post-text type a messages
+          %i.fa.fa-picture-o{"aria-hidden" => "true"}
         .chats-post-bottom
-          SENT
+          Send
+
