@@ -33,13 +33,15 @@ header{
       float: left;
     }
     .chat-group-bottom{
-      height: 40px;
+      line-height: 40px;
       width: 40px;
-      float: right;
       margin-top: 28px;
       margin-right: 40px;
+      padding: 0 20px;
       border-style: solid;
+      float: right;
       border-color: $blue-color;
+      color: $blue-color;
     }
     .chat-group-member{
       font-size: 12px;
@@ -49,7 +51,7 @@ header{
       clear: right;
     }
   .chats-messages{
-    background-color: #AAAAAA;
+    background-color: #FAFAFA;
     padding-left: 40px;
     padding-right: 40px;
     .chats-messages-groups{
@@ -75,7 +77,7 @@ header{
           color: #434A54;
         }
     .chats-post{
-      height: 50px;
+      line-height: 50px;
       width: 70%;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -91,10 +93,11 @@ header{
         float: left;
       }
       .chats-post-bottom{
-        height: 50px;
+        line-height: 50px;
         float: right;
-        margin-right: 40px;
-        margin-left: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
+        color: white;
       }
   }
 }
