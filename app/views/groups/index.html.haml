@@ -1,47 +1,47 @@
-.flash-message
-  %p.flash-message-text チャットグループが作成されました。
+.flash__message
+  %p.flash__message__text チャットグループが作成されました。
 .contents
   .group
-    .group-user
-      %p.group-user-name tomoya kinsho
-      %i.fa.fa-cog.fa-lx{"aria-hidden" => "true"}
-      %i.fa.fa-check-square-o{"aria-hidden" => "true"}
-    .group-contents
-      .group-contents-box
-        %p.group-contents-box-name 神
-        %p.group-contents-box-message aaaaaaaa
-      .group-contents-box
-        %p.group-contents-box-name aaaaaaa
-        %p.group-contents-box-message メッセージはありません
-      .group-contents-box
-        %p.group-contents-box-name sampleグループ
-        %p.group-contents-box-message aaaaaaaaaaa
+    .group__user
+      %p.group__user__name tomoya kinsho
+      %i.group__user__icon--left.fa.fa-cog.fa-lx{"aria-hidden" => "true"}
+      %i.group__user__icon--right.fa.fa-check-square-o{"aria-hidden" => "true"}
+    .group__contents
+      .group__contents__box
+        %p.group__contents__box__name 神
+        %p.group__contents__box__message aaaaaaaa
+      .group__contents__box
+        %p.group__contents__box__name aaaaaaa
+        %p.group__contents__box__message メッセージはありません
+      .group__contents__box
+        %p.group__contents__box__name sampleグループ
+        %p.group__contents__box__message aaaaaaaaaaa
   .chat
-    .chat-group
-      %p.chat-group-name sampleグループ
-      .chat-group-edit Edit
-      %p.chat-group-member tomoya
-    .chat-messages
-      .chat-messages-contents
-        .chat-messages-contents-box
-          %p.chat-messages-contents-box-name tomoya
-          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
-        .chat-messages-contents-textbox
-          %p.chat-messages-contents-box-text こんにちは
-        .chat-messages-contents-box
-          %p.chat-messages-contents-box-name tomoya
-          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
-        .chat-messages-contents-textbox
-          %p.chat-messages-contents-box-text こんにちは
-        .chat-messages-contents-box
-          %p.chat-messages-contents-box-name tomoya
-          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
-        .chat-messages-contents-textbox
-          %p.chat-messages-contents-box-texts こんにちは
-      .chats-post
-        .chats-post-text
-          %p.chats-post-text type a messages
-          %i.fa.fa-picture-o{"aria-hidden" => "true"}
-        .chats-post-bottom
+    .chat__group
+      %p.chat__group__name sampleグループ
+      .chat__group__edit Edit
+      %p.chat__group__member tomoya
+    .chat__messages
+      .chat__messages__contents
+        .chat__messages__contents__box
+          %p.chat__messages__contents__box__name tomoya
+          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
+        .chat__messages__contents__textbox
+          %p.chat__messages__contents__textbox__text こんにちは
+        .chat__messages__contents__box
+          %p.chat__messages__contents__box__name tomoya
+          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
+        .chat__messages__contents__textbox
+          %p.chat__messages__contents__textbox__text こんにちは
+        .chat__messages__contents__box
+          %p.chat__messages__contents__box__name tomoya
+          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
+        .chat__messages__contents__textbox
+          %p.chat__messages__contents__textbox__text こんにちは
+      .chat__messages__post
+        .chat__messages__post__text
+          %p.chat__messages__post__text type a messages
+          %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
+        .chat__messages__post__buttom
           Send
 

@@ -1,4 +1,4 @@
-html, body, .contents, .group, .chat, .chat-messages{
+html, body, .contents, .group, .chat, .chat__messages{
   height: 100%;
 }
 
@@ -16,17 +16,17 @@ body{
   clear: both;
 }
 
-.flash-message, .chats-post-bottom{
+.flash__message, .chat__messages__post__buttom{
   background-color: $blue-color;
 }
 
-.group-contents-box-name, .group-contents-box-message{
+.group__contents__box__name, .group__contents__box__message{
   color: #FFFFFF;
 }
 
 
-.flash-message{
-  .flash-message-text{
+.flash__message{
+  .flash__message__text{
     color: white;
     text-align: center;
   }
@@ -34,71 +34,71 @@ body{
 
 
 .chat{
+  width: 1140px;
   float: left;
-  .chat-group{
+  &__group{
     border-color: #eeeeee;
     padding-left: 40px;
-    .chat-group-name{
+    &__name{
       font-size: 20px;
       color: #333333;
       padding-top: 35px;
       float: left;
     }
-    .chat-group-edit{
+    &__edit{
+      font-size: 20px;
       line-height: 40px;
-      width: 40px;
       margin-top: 28px;
       margin-right: 40px;
       padding: 0 20px;
-      border-style: solid;
+      border: medium solid $blue-color;
       float: right;
-      border-color: $blue-color;
       color: $blue-color;
     }
-    .chat-group-member{
+    &__member{
       font-size: 12px;
       margin-top: 15px;
       padding-bottom: 4px;
       color: #999999;
-      clear: right;
+      clear: both;
     }
   }
-  .chat-messages{
+  &__messages{
     background-color: #FAFAFA;
-    .chat-messages-contents{
+    &__contents{
       height: 100%;
       padding: 46px 40px 0px 40px;
-      .chat-messages{
+      &__box{
         padding-bottom: 40px;
-        .chat-messages-contents-box-name{
+        &__name{
           font-wight: bold;
           color: #434A54;
           font-size: 16px;
           float: left;
         }
-        .chat-messages-contents-box-time{
+        &__time{
           font-size: 12px;
           color: #999999;
           margin-left: 10px;
           float: left;
         }
       }
-      .chat-messages-contents-textbox{
+      &__textbox{
         margin-bottom: 40px;
-        .chat-messages-contents-box-text{
+        &__text{
           font-size: 14px;
           color: #434A54;
         }
       }
     }
-    .chats-post{
+    &__post{
       height: 50px;
       width: 75%;
       padding: 20px 40px 20px 40px;
       position: absolute;
       bottom: 0px;
       background-color: #AAAAAA;
-      .chats-post-text{
+      &__text{
         line-height: 50px;
         width: 88%;
         font-size: 16px;
@@ -107,14 +107,14 @@ body{
         padding-left: 10px;
         float: left;
         display: block;
-        .fa-picture-o{
-        line-height: 50px;
+        &__icon{
         float: right;
         padding-right: 10px;
+        margin-top: 15px;
         color: black;
       }
       }
-      .chats-post-bottom{
+      &__buttom{
         line-height: 50px;
         padding:0px 25px;
         margin-left: 15px;

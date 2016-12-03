@@ -1,33 +1,33 @@
 .group{
   width: 300px;
   float: left;
-  .group-user{
+  &__user{
     background-color: #253141;
     height: 96px;
     padding: 0 20px;
-    .group-user-name{
+    &__name{
       font-weight: bold;
       color: #FFFFFF;
-      margin: 40px 0px;
+      margin-top: 40px;
       float: left;
     }
-    .fa-cog, .fa-check-square-o{
+    &__icon--left, &__icon--right{
       color: #FFF;
-      font-size: 20px;
-      margin: 40px 5px;
+      font-size: 40px;
+      margin: 40px 5px 0px 5px;
       float: right;
     }
   }
-  .group-contents{
+  &__contents{
     padding: 0px 20px;
     height: 100%;
     background-color: #2f3e51;
-    .group-contents-box-name{
+    &__box__name{
       font-size: 15px;
       padding-top: 20px;
       padding-bottom: 5px;
     }
-    .group-contents-box-message{
+    &__box__message{
     font-size: 11px;
     padding-bottom: 40px;
     }
