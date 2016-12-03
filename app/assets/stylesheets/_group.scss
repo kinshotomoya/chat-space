@@ -1,36 +1,36 @@
 .group{
   width: 300px;
   float: left;
-  .group-user-name{
+  .group-user{
     background-color: #253141;
     height: 96px;
     padding: 0 20px;
-  }
-    .user-name{
+    .group-user-name{
       font-weight: bold;
       color: #FFFFFF;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin: 40px 0px;
       float: left;
     }
-    i{
-      margin: 40px 0;
+    .fa-cog, .fa-check-square-o{
+      color: #FFF;
+      font-size: 20px;
+      margin: 40px 5px;
       float: right;
     }
-  .groups-names{
-    padding-left: 20px;
-    padding-right: 20px;
+  }
+  .group-contents{
+    padding: 0px 20px;
     height: 100%;
     background-color: #2f3e51;
-  }
-    .group-name{
+    .group-contents-box-name{
       font-size: 15px;
       padding-top: 20px;
       padding-bottom: 5px;
     }
-    .group-messages{
+    .group-contents-box-message{
     font-size: 11px;
     padding-bottom: 40px;
     }
+  }
 }
 

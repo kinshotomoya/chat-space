@@ -1,43 +1,43 @@
-%header
-  %p.header-text チャットグループが作成されました。
+.flash-message
+  %p.flash-message-text チャットグループが作成されました。
 .contents
   .group
-    .group-user-name
-      %p.user-name tomoya kinsho
+    .group-user
+      %p.group-user-name tomoya kinsho
       %i.fa.fa-cog.fa-lx{"aria-hidden" => "true"}
       %i.fa.fa-check-square-o{"aria-hidden" => "true"}
-    .groups-names
-      .group-names
-        %p.group-name 神
-        %p.group-messages aaaaaaaa
-      .group-names
-        %p.group-name aaaaaaa
-        %p.group-messages メッセージはありません
-      .group-names
-        %p.group-name sampleグループ
-        %p.group-messages aaaaaaaaaaa
-  .chats
-    .chatsgroup-name
+    .group-contents
+      .group-contents-box
+        %p.group-contents-box-name 神
+        %p.group-contents-box-message aaaaaaaa
+      .group-contents-box
+        %p.group-contents-box-name aaaaaaa
+        %p.group-contents-box-message メッセージはありません
+      .group-contents-box
+        %p.group-contents-box-name sampleグループ
+        %p.group-contents-box-message aaaaaaaaaaa
+  .chat
+    .chat-group
       %p.chat-group-name sampleグループ
-      .chat-group-bottom Edit
+      .chat-group-edit Edit
       %p.chat-group-member tomoya
-    .chats-messages
-      .chats-messages-groups
-        .chat-messages
-          %span.chat-messages-name tomoya
-          %p.chat-messages-time 2016/10/02 06:28:22
-        .each-chat-messages
-          %p.chat-messages-text こんにちは
-        .chat-messages
-          %p.chat-messages-name tomoya
-          %span.chat-messages-time 2016/10/02 06:28:22
-        .each-chat-messages
-          %p.chat-messages-text こんにちは
-        .chat-messages
-          %p.chat-messages-name tomoya
-          %span.chat-messages-time 2016/10/02 06:28:22
-        .each-chat-messages
-          %p.chat-messages-text こんにちは
+    .chat-messages
+      .chat-messages-contents
+        .chat-messages-contents-box
+          %p.chat-messages-contents-box-name tomoya
+          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
+        .chat-messages-contents-textbox
+          %p.chat-messages-contents-box-text こんにちは
+        .chat-messages-contents-box
+          %p.chat-messages-contents-box-name tomoya
+          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
+        .chat-messages-contents-textbox
+          %p.chat-messages-contents-box-text こんにちは
+        .chat-messages-contents-box
+          %p.chat-messages-contents-box-name tomoya
+          %p.chat-messages-contents-box-time 2016/10/02 06:28:22
+        .chat-messages-contents-textbox
+          %p.chat-messages-contents-box-texts こんにちは
       .chats-post
         .chats-post-text
           %p.chats-post-text type a messages

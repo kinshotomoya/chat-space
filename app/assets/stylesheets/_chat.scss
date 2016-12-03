@@ -1,4 +1,4 @@
-html, body, .contents, .group, .chats, .chats-messages{
+html, body, .contents, .group, .chat, .chat-messages{
   height: 100%;
 }
 
@@ -10,38 +10,41 @@ body{
   position: relative;
   overflow: hidden;
 }
+.contents:after{
+  content: "";
+  display: block;
+  clear: both;
+}
 
-
-header, .chats-post-bottom{
+.flash-message, .chats-post-bottom{
   background-color: $blue-color;
 }
 
-.group-name, .group-messages{
+.group-contents-box-name, .group-contents-box-message{
   color: #FFFFFF;
 }
 
 
-header{
-  .header-text{
+.flash-message{
+  .flash-message-text{
     color: white;
     text-align: center;
   }
 }
 
 
-.chats{
-  margin-left: 300px;
-  .chatsgroup-name{
+.chat{
+  float: left;
+  .chat-group{
     border-color: #eeeeee;
     padding-left: 40px;
-  }
     .chat-group-name{
       font-size: 20px;
       color: #333333;
       padding-top: 35px;
       float: left;
     }
-    .chat-group-bottom{
+    .chat-group-edit{
       line-height: 40px;
       width: 40px;
       margin-top: 28px;
@@ -59,46 +62,42 @@ header{
       color: #999999;
       clear: right;
     }
-  .chats-messages{
+  }
+  .chat-messages{
     background-color: #FAFAFA;
-    .chats-messages-groups{
-      padding-top: 46px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
+    .chat-messages-contents{
+      height: 100%;
+      padding: 46px 40px 0px 40px;
       .chat-messages{
         padding-bottom: 40px;
-      }
-        .chat-messages-name{
+        .chat-messages-contents-box-name{
           font-wight: bold;
           color: #434A54;
           font-size: 16px;
           float: left;
         }
-        .chat-messages-time{
+        .chat-messages-contents-box-time{
           font-size: 12px;
           color: #999999;
           margin-left: 10px;
           float: left;
         }
-      .each-chat-messages{
-        margin-bottom: 40px;
       }
-        .chat-messages-text{
+      .chat-messages-contents-textbox{
+        margin-bottom: 40px;
+        .chat-messages-contents-box-text{
           font-size: 14px;
           color: #434A54;
         }
+      }
+    }
     .chats-post{
       height: 50px;
       width: 75%;
-      padding-right: 40px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 40px;
+      padding: 20px 40px 20px 40px;
       position: absolute;
       bottom: 0px;
       background-color: #AAAAAA;
-    }
       .chats-post-text{
         line-height: 50px;
         width: 88%;
@@ -108,19 +107,20 @@ header{
         padding-left: 10px;
         float: left;
         display: block;
-      }
-      .fa-picture-o{
-        line-height: 50px;        float: right;
+        .fa-picture-o{
+        line-height: 50px;
+        float: right;
         padding-right: 10px;
         color: black;
       }
+      }
       .chats-post-bottom{
         line-height: 50px;
-        padding-right: 25px;
-        padding-left: 25px;
+        padding:0px 25px;
         margin-left: 15px;
         color: white;
         float: right;
       }
+    }
   }
 }
