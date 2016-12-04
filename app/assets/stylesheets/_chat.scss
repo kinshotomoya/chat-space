@@ -20,13 +20,14 @@ body{
   background-color: $blue-color;
 }
 
-.group__contents__box__name, .group__contents__box__message{
+
+.text__white{
   color: #FFFFFF;
 }
 
 
 .flash__message{
-  .flash__message__text{
+  &__text{
     color: white;
     text-align: center;
   }
@@ -108,11 +109,11 @@ body{
         float: left;
         display: block;
         &__icon{
-        float: right;
-        padding-right: 10px;
-        margin-top: 15px;
-        color: black;
-      }
+          float: right;
+          padding-right: 10px;
+          margin-top: 15px;
+          color: black;
+        }
       }
       &__buttom{
         line-height: 50px;

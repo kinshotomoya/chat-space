@@ -11,7 +11,7 @@
       margin-top: 40px;
       float: left;
     }
-    &__icon--left, &__icon--right{
+    &__icon--left{
       color: #FFF;
       font-size: 40px;
       margin: 40px 5px 0px 5px;
@@ -22,14 +22,16 @@
     padding: 0px 20px;
     height: 100%;
     background-color: #2f3e51;
-    &__box__name{
-      font-size: 15px;
-      padding-top: 20px;
-      padding-bottom: 5px;
-    }
-    &__box__message{
-    font-size: 11px;
-    padding-bottom: 40px;
+    &__box{
+      &__name{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
     }
   }
 }
