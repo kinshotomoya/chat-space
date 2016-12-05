@@ -1,0 +1,91 @@
+.chat{
+  width: 1140px;
+  float: left;
+  &__group{
+    border-color: #eeeeee;
+    padding-left: 40px;
+    &__name{
+      font-size: 20px;
+      color: #333333;
+      padding-top: 35px;
+      float: left;
+    }
+    &__edit{
+      font-size: 20px;
+      line-height: 40px;
+      margin-top: 28px;
+      margin-right: 40px;
+      padding: 0 20px;
+      border: medium solid $blue-color;
+      float: right;
+      color: $blue-color;
+    }
+    &__member{
+      font-size: 12px;
+      margin-top: 15px;
+      padding-bottom: 4px;
+      color: #999999;
+      clear: both;
+    }
+  }
+  &__messages{
+    background-color: #FAFAFA;
+    &__contents{
+      height: 100%;
+      padding: 46px 40px 0px 40px;
+      &__box{
+        padding-bottom: 40px;
+        &__name{
+          font-wight: bold;
+          color: $black-color;
+          font-size: 16px;
+          float: left;
+        }
+        &__time{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+          float: left;
+        }
+      }
+      &__textbox{
+        margin-bottom: 40px;
+        &__text{
+          font-size: 14px;
+          color: $black-color;
+        }
+      }
+    }
+    &__post{
+      height: 50px;
+      width: 75%;
+      padding: 20px 40px 20px 40px;
+      position: absolute;
+      bottom: 0px;
+      background-color: #ddd;
+      &__text{
+        line-height: 50px;
+        width: 88%;
+        font-size: 16px;
+        background-color: $white-color;
+        color: #AAAAAA;
+        padding-left: 10px;
+        float: left;
+        display: block;
+        &__icon{
+          float: right;
+          padding-right: 10px;
+          margin-top: 15px;
+          color: $black-color;
+        }
+      }
+      &__buttom{
+        line-height: 50px;
+        padding:0px 25px;
+        margin-left: 15px;
+        color: $white-color;
+        float: right;
+      }
+    }
+  }
+}

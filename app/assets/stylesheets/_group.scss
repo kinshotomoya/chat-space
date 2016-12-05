@@ -1,0 +1,38 @@
+.group{
+  width: 300px;
+  float: left;
+  &__user{
+    background-color: #253141;
+    height: 96px;
+    padding: 0 20px;
+    &__name{
+      font-weight: bold;
+      color: $white-color;
+      margin-top: 40px;
+      float: left;
+    }
+    &__icon--left{
+      color: $white-color;
+      font-size: 40px;
+      margin: 40px 5px 0px 5px;
+      float: right;
+    }
+  }
+  &__contents{
+    padding: 0px 20px;
+    height: 100%;
+    background-color: #2f3e51;
+    &__box{
+      &__name{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
