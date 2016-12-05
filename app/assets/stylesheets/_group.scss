@@ -7,12 +7,12 @@
     padding: 0 20px;
     &__name{
       font-weight: bold;
-      color: #FFFFFF;
+      color: $white-color;
       margin-top: 40px;
       float: left;
     }
     &__icon--left{
-      color: #FFF;
+      color: $white-color;
       font-size: 40px;
       margin: 40px 5px 0px 5px;
       float: right;
