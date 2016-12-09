@@ -5,7 +5,8 @@
     .group__user
       %p.group__user__name tomoya kinsho
       %i.group__user__icon--left.fa.fa-cog.fa-lx{"aria-hidden" => "true"}
-      %i.group__user__icon--left.fa.fa-check-square-o{"aria-hidden" => "true"}
+      =link_to "users/edit" do
+        %i.group__user__icon--left.fa.fa-check-square-o{"aria-hidden" => "true"}
     .group__contents
       .group__contents__box
         %p.group__contents__box__name.text__white 神
