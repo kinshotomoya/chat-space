@@ -3,7 +3,8 @@
 .contents
   .group
     .group__user
-      %p.group__user__name tomoya kinsho
+      %p.group__user__name
+        =current_user.name
       %i.group__user__icon--left.fa.fa-cog.fa-lx
       =link_to edit_user_registration_path do
         %i.group__user__icon--left.fa.fa-check-square-o
