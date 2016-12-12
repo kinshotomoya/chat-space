@@ -8,6 +8,9 @@
     = csrf_meta_tags
     %link{:href => "./font-awesome.css", :rel => "stylesheet"}/
   %body
-    %p.notice= notice
-    %p.alert= alert
+    - if notice
+      %p.alert.alert-success= notice
+    - if alert
+      %p.alert.alert-danger= alert
+
     = yield
