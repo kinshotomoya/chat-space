@@ -16,19 +16,11 @@ body{
   clear: both;
 }
 
-.flash__message, .chat__messages__post__buttom{
+.chat__messages__post__buttom{
   background-color: $blue-color;
 }
 
 
 .text__white{
   color: $white-color;
-}
-
-
-.flash__message{
-  &__text{
-    color: $white-color;
-    text-align: center;
-  }
 }
