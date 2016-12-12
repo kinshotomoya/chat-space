@@ -9,8 +9,8 @@
     %link{:href => "./font-awesome.css", :rel => "stylesheet"}/
   %body
     - if notice
-      %p.notice.notice-success= notice
+      %p.flash-message.notice-success= notice
     - if alert
-      %p.alert.alert-danger= alert
+      %p.flash-message.alert-danger= alert
 
     = yield
