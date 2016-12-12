@@ -12,7 +12,7 @@ ja:
       invalid: "メールアドレスまたはパスワードが違います。"
       locked: 'あなたのアカウントは凍結されています。'
       last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。'
-      not_found_in_database: "%{authentication_keys} もしくはパスワードが不正です。"
+      not_found_in_database: "メールアドレスまたはパスワードが違います。"
       timeout: 'セッションがタイムアウトしました。もう一度ログインしてください。'
       unauthenticated: 'アカウント登録もしくはログインしてください。'
       unconfirmed: 'メールアドレスの本人確認が必要です。'
