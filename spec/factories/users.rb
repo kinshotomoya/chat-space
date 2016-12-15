@@ -3,8 +3,8 @@ FactoryGirl.define do
   factory :user do
     name                         {Faker::Name.name}
     email                        {Faker::Internet.email}
-    password                     {Faker::Internet.password}
-    password_confirmation        {Faker::Internet.password}
+    password                     '11111111'
+    password_confirmation        '11111111'
   end
 
 end
