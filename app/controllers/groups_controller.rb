@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
 
   def update
     group = Group.find(params[:id])
-    group.update(name: params[:chat_group][:name])
+    group.update(name: params[:group][:name])
     redirect_to action: :index, :notice => "更新完了"
   end
 
