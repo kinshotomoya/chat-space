@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
+    @group = Group.all
   end
 
   def new
@@ -10,6 +11,10 @@ class GroupsController < ApplicationController
     Group.create(name: params[:chat_group][:name])
     redirect_to action: :index
   end
+
+  def edit
+  end
+
 
 
 end

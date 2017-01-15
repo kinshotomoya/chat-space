@@ -9,19 +9,14 @@
       =link_to new_group_path do
         %i.group__user__icon--left.fa.fa-check-square-o
     .group__contents
-      .group__contents__box
-        %p.group__contents__box__name.text__white 神
-        %p.group__contents__box__message.text__white aaaaaaaa
-      .group__contents__box
-        %p.group__contents__box__name.text__white aaaaaaa
-        %p.group__contents__box__message.text__white メッセージはありません
-      .group__contents__box
-        %p.group__contents__box__name.text__white sampleグループ
-        %p.group__contents__box__message.text__white aaaaaaaaaaa
+      - @group.each do |group|
+        .group__contents__box
+          %p.group__contents__box__name.text__white
+            =group.name
+          %p.group__contents__box__message.text__white
   .chat
     .chat__group
-      %p.chat__group__name sampleグループ
-      =link_to edit_group_path(@group.id) do
+      %p.chat__group__name
         .chat__group__edit Edit
       %p.chat__group__member tomoya
     .chat__messages
