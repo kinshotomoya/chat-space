@@ -10,10 +10,11 @@
         %i.group__user__icon--left.fa.fa-check-square-o
     .group__contents
       - @group.each do |group|
-        .group__contents__box
-          %p.group__contents__box__name.text__white
-            =group.name
-          %p.group__contents__box__message.text__white
+        =link_to group_chats_path(group.id) do
+          .group__contents__box
+            %p.group__contents__box__name.text__white
+              =group.name
+            %p.group__contents__box__message.text__white
   .chat
     .chat__group
       %p.chat__group__name
