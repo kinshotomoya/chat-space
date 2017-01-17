@@ -1,5 +1,5 @@
 class UserGroup < ApplicationRecord
-  belongs_to :groups
-  belongs_to :users
+  belongs_to :group
+  belongs_to :user
 
 end

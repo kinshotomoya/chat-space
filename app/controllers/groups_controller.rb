@@ -9,15 +9,13 @@ class GroupsController < ApplicationController
     @group = Group.all
   end
 
-  def new
-  end
-
   def create
     @group = Group.new(group_params)
+
     if @group.save
-      redirect_to @group, notice: "グループ作成しました。"
+      redirect_to :root_path, notice: "グループ作成しました。"
     else
-      render :new
+      redirect_to '/groups/new', alert: "グループを作成してください。"
     end
   end
 
@@ -31,10 +29,8 @@ class GroupsController < ApplicationController
     redirect_to action: :index
   end
 
+  private
   def group_params
-    params.require(:group).permit(:text, {user_ids => []})
+    params.require(:group).permit(chat_grop:[:name], group:[:user_ids])
   end
-
-
-
 end
