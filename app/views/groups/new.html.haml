@@ -3,7 +3,7 @@
   = form_for(@group) do |f|
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
-        .chat-group-form__label{:for => "chat_group_name"}
+        .chat-group-form__label
           = f.label :グループ名
       .chat-group-form__field--right
         = f.text_field :name, :placeholder => "グループ名を入力してください", class: "chat-group-form__input"
@@ -17,7 +17,7 @@
     /     #user-search-result
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
-        .chat-group-form__label{:for => "chat_group_チャットメンバー"}
+        .chat-group-form__label
           = f.label :チャットメンバー
       .chat-group-form__field--right
         = f.collection_check_boxes :user_ids, User.all, :id, :name do |ff|
