@@ -1,13 +1,14 @@
 class GroupsController < ApplicationController
 
+   def index
+    @group = Group.all
+  end
+
   def new
     @group = Group.new
     @group.users << current_user
   end
 
-  def index
-    @group = Group.all
-  end
 
   def create
     @group = Group.new(group_params)
@@ -15,7 +16,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to '/', notice: "グループ作成しました。"
     else
-      flash.now[:alert] = "グループを作成してください。"
+      flash.now[:alert] = "再入力してください。"
       render :action => :new
 
     end
