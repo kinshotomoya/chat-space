@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20170116130433) do
     t.integer  "group_id",                 null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.index ["group_id"], name: "index_chats_on_group_id", using: :btree
+    t.index ["user_id"], name: "index_chats_on_user_id", using: :btree
   end
 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -32,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170116130433) do
     t.integer  "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_user_groups_on_group_id", using: :btree
+    t.index ["user_id"], name: "index_user_groups_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
