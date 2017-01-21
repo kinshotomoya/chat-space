@@ -3,8 +3,8 @@ class CreateChats < ActiveRecord::Migration[5.0]
     create_table :chats do |t|
       t.text :text
       t.string :image
-      t.integer :user_id, null: false
-      t.integer :group_id, null: false
+      t.references :user, null: false
+      t.references :group, null: false
       t.timestamps
     end
   end

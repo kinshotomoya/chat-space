@@ -24,11 +24,12 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
+    @group.user_groups
   end
 
   def update
     group = Group.find(params[:id])
-    group.update(name: params[:group][:name])
+    group.update(group_params)
     redirect_to action: :index
   end
 
