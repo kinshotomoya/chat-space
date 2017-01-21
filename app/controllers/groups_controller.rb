@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
    def index
-    @group = Group.all
+    @groups = UserGroup.where(user_id: current_user.id)
   end
 
   def new
@@ -12,9 +12,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-
     if @group.save
-      redirect_to '/', notice: "グループ作成しました。"
+      redirect_to group_chats_path(@group.id), notice: "グループ作成しました。"
     else
       flash.now[:alert] = "再入力してください。"
       render :action => :new
@@ -30,7 +29,7 @@ class GroupsController < ApplicationController
   def update
     group = Group.find(params[:id])
     group.update(group_params)
-    redirect_to action: :index
+    redirect_to group_chats_path(group.id), notice: "編集しました。"
   end
 
   private
@@ -38,3 +37,5 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, {:user_ids =>[]})
   end
 end
+
+
