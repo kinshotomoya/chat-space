@@ -18,6 +18,7 @@
   .chat
     .chat__group
       %p.chat__group__name
+        =@group.name
       =link_to edit_group_path(params[:group_id]) do
         .chat__group__edit Edit
       %p.chat__group__member
