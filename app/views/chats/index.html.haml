@@ -21,8 +21,11 @@
         =@group.name
       =link_to edit_group_path(params[:group_id]) do
         .chat__group__edit Edit
-      %p.chat__group__member
-        =current_user.name
+      .chat__group__member
+      %span.chat__group__member member:
+      -@users.each do |user|
+        %span.chat__group__member
+          =user.user.name
     .chat__messages
       / .chat__messages__contents
       /   .chat__messages__contents__box
