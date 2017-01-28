@@ -1,4 +1,3 @@
-
 .contents
   .group
     .group__user
@@ -9,38 +8,5 @@
       =link_to new_group_path do
         %i.group__user__icon--left.fa.fa-check-square-o
     .group__contents
-      - @groups.each do |group|
-        =link_to group_chats_path(group.id) do
-          .group__contents__box
-            %p.group__contents__box__name.text__white
-              =group.group.name
-            %p.group__contents__box__message.text__white
-  / .chat
-  /   .chat__group
-  /     %p.chat__group__name
-  /       .chat__group__edit Edit
-  /     %p.chat__group__member tomoya
-  /   .chat__messages
-  /     .chat__messages__contents
-  /       .chat__messages__contents__box
-  /         %p.chat__messages__contents__box__name tomoya
-  /         %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-  /       .chat__messages__contents__textbox
-  /         %p.chat__messages__contents__textbox__text こんにちは
-  /       .chat__messages__contents__box
-  /         %p.chat__messages__contents__box__name tomoya
-  /         %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-  /       .chat__messages__contents__textbox
-  /         %p.chat__messages__contents__textbox__text こんにちは
-  /       .chat__messages__contents__box
-  /         %p.chat__messages__contents__box__name tomoya
-  /         %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-  /       .chat__messages__contents__textbox
-  /         %p.chat__messages__contents__textbox__text こんにちは
-  /     .chat__messages__post
-  /       .chat__messages__post__text
-  /         %p.chat__messages__post__text type a messages
-  /         %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
-  /       .chat__messages__post__buttom
-  /         Send
+      =render partial: 'shared/group', collection: @groups
 

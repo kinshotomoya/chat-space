@@ -9,12 +9,7 @@
       =link_to new_group_path do
         %i.group__user__icon--left.fa.fa-check-square-o
     .group__contents
-      -@user_groups.each do |user_group|
-        =link_to group_chats_path(user_group.group_id) do
-          .group__contents__box
-            %p.group__contents__box__name.text__white
-              =user_group.group.name
-            %p.group__contents__box__message.text__white
+      =render partial: 'shared/group', collection: @groups
   .chat
     .chat__group
       %p.chat__group__name
@@ -27,22 +22,6 @@
         %span.chat__group__member
           =user.user.name
     .chat__messages
-      / .chat__messages__contents
-      /   .chat__messages__contents__box
-      /     %p.chat__messages__contents__box__name tomoya
-      /     %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-      /   .chat__messages__contents__textbox
-      /     %p.chat__messages__contents__textbox__text こんにちは
-      /   .chat__messages__contents__box
-      /     %p.chat__messages__contents__box__name tomoya
-      /     %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-      /   .chat__messages__contents__textbox
-      /     %p.chat__messages__contents__textbox__text こんにちは
-      /   .chat__messages__contents__box
-      /     %p.chat__messages__contents__box__name tomoya
-      /     %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-      /   .chat__messages__contents__textbox
-      /     %p.chat__messages__contents__textbox__text こんにちは
       .chat__messages__post
         = form_for [@group, @chat] do |f|
           .chat__messages__post__text
