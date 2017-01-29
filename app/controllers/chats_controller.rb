@@ -1,10 +1,10 @@
 class ChatsController < ApplicationController
 
   def index
-     @groups = UserGroup.where(user_id: current_user.id)
-     @users = UserGroup.where(group_id: params[:group_id])
-     @chat = Chat.new
      @group = Group.find(params[:group_id])
+     @groups = current_user.groups
+     @users = @group.users
+     @chat = Chat.new
 
   end
 

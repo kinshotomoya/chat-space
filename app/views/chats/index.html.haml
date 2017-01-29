@@ -20,7 +20,7 @@
       %span.chat__group__member member:
       -@users.each do |user|
         %span.chat__group__member
-          =user.user.name
+          =user.name
     .chat__messages
       .chat__messages__post
         = form_for [@group, @chat] do |f|
