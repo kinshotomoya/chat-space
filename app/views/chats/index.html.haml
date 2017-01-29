@@ -9,33 +9,23 @@
       =link_to new_group_path do
         %i.group__user__icon--left.fa.fa-check-square-o
     .group__contents
+      =render partial: 'shared/group', collection: @groups
   .chat
     .chat__group
       %p.chat__group__name
+        =@group.name
       =link_to edit_group_path(params[:group_id]) do
         .chat__group__edit Edit
-      %p.chat__group__member tomoya
+      .chat__group__member
+      %span.chat__group__member member:
+      -@users.each do |user|
+        %span.chat__group__member
+          =user.user.name
     .chat__messages
-      .chat__messages__contents
-        .chat__messages__contents__box
-          %p.chat__messages__contents__box__name tomoya
-          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-        .chat__messages__contents__textbox
-          %p.chat__messages__contents__textbox__text こんにちは
-        .chat__messages__contents__box
-          %p.chat__messages__contents__box__name tomoya
-          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-        .chat__messages__contents__textbox
-          %p.chat__messages__contents__textbox__text こんにちは
-        .chat__messages__contents__box
-          %p.chat__messages__contents__box__name tomoya
-          %p.chat__messages__contents__box__time 2016/10/02 06:28:22
-        .chat__messages__contents__textbox
-          %p.chat__messages__contents__textbox__text こんにちは
       .chat__messages__post
-        .chat__messages__post__text
-          %p.chat__messages__post__text type a messages
-          %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
-        .chat__messages__post__buttom
-          Send
+        = form_for [@group, @chat] do |f|
+          .chat__messages__post__text
+            =f.text_field :text, :placeholder => "type a message", class: "chat__messages__post__text"
+            %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
+          = f.submit 'SENT', class: "chat__messages__post__buttom"
 
