@@ -11,15 +11,13 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
     if @chat.text.empty?
-      flash[:alert] = "メッセージを入力してください。"
+    if @chat.save
+      redirect_to group_chats_path(@chat.group_id)
     else
-      if @chat.save
-        redirect_to group_chats_path(@chat.group_id)
-      else
-        flash[:alert] = "入力してください。"
+      if @chat.text.empty?
+        flash[:alert] = "メッセージを入力してください。"
       end
     end
-
   end
 
 
