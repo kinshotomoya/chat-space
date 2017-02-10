@@ -1,10 +1,10 @@
 class ChatsController < ApplicationController
 
   def index
-     @groups = UserGroup.where(user_id: current_user.id)
-     @users = UserGroup.where(group_id: params[:group_id])
-     @chat = Chat.new
      @group = Group.find(params[:group_id])
+     @groups = current_user.groups
+     @users = @group.users
+     @chat = Chat.new
 
   end
 
@@ -13,9 +13,8 @@ class ChatsController < ApplicationController
     if @chat.save
       redirect_to group_chats_path(@chat.group_id)
     else
-      flash.now[:alert] = "入力してください。"
+      flash[:alert] = "メッセージを入力してください。"
     end
-
   end
 
 
