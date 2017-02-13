@@ -2,5 +2,9 @@
 
 FactoryGirl.define do
   factory :chat do
+    text           "hello"
+    user_id        '1'
+    group_id       '60'
+    image          ""
   end
 end

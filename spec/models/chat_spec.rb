@@ -1,5 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe Chat, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Chat do
+  describe "#create" do
+    it "is invalid without a text" do
+      chat = build(:chat, text: "")
+      chat.valid?
+      expect(chat.errors[:text]).to include("を入力してください")
+    end
+
+    it "is valid with a text" do
+      chat = build(:chat)
+      chat.valid?
+      expect(chat).to be_valid
+    end
+  end
 end
+
