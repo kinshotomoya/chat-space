@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :chat do
-    text           "hello"
-    user_id        '1'
-    group_id       '60'
-    image          ""
+    text           {Faker::Lorem.paragraph}
+    user_id        {Faker::Number.number(1)}
+    group_id       {Faker::Number.number(2)}
+    image          {Faker::Avatar.image}
   end
 end
