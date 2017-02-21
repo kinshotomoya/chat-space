@@ -27,7 +27,6 @@ $(function(){
 
 
   function appendHtml(data){
-
     var html = `<div class="chat__messages__contents__each">
                   <div class="chat__messages__contents__box">
                     <p class="chat__messages__contents__box__name">${ data.name }</p>
@@ -37,10 +36,8 @@ $(function(){
                     <p class="chat__messages__contents__textbox__text">${ data.text }</p>
                   </div>
                 </div>`;//コントローラから送られて来た値を取り出すことでviewに表示させる
-
     $(".chat__messages__contents").append(html);
   }
-
 
 });
 
