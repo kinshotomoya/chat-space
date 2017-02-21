@@ -1,0 +1,10 @@
+.chat__messages__contents__each
+  .chat__messages__contents__box
+    %p.chat__messages__contents__box__name
+      =chat.user.name
+    %p.chat__messages__contents__box__time
+      =chat.created_at
+  .chat__messages__contents__textbox
+    %p.chat__messages__contents__textbox__text
+      =chat.text
+

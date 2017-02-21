@@ -34,29 +34,32 @@
     &__contents{
       height: 100%;
       padding: 46px 40px 0px 40px;
-      &__box{
-        padding-bottom: 40px;
-        &__name{
-          font-wight: bold;
-          color: $black-color;
-          font-size: 16px;
-          float: left;
+      &__each{
+        margin-bottom: 10px;
+      }
+        &__box{
+          padding-bottom: 40px;
+          &__name{
+            font-wight: bold;
+            color: $black-color;
+            font-size: 16px;
+            float: left;
+          }
+          &__time{
+            font-size: 12px;
+            color: #999999;
+            margin-left: 10px;
+            float: left;
+          }
         }
-        &__time{
-          font-size: 12px;
-          color: #999999;
-          margin-left: 10px;
-          float: left;
+        &__textbox{
+          margin-bottom: 40px;
+          &__text{
+            font-size: 14px;
+            color: $black-color;
+          }
         }
       }
-      &__textbox{
-        margin-bottom: 40px;
-        &__text{
-          font-size: 14px;
-          color: $black-color;
-        }
-      }
-    }
     &__post{
       height: 50px;
       width: 75%;

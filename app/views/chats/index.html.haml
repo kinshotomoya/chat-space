@@ -22,10 +22,12 @@
         %span.chat__group__member
           =user.name
     .chat__messages
+      .chat__messages__contents
+        =render partial: 'shared/chat', collection: @chats
       .chat__messages__post
-        = form_for [@group, @chat] do |f|
+        = form_for [@group, @chat], html: {id: 'the_form', class: 'form'} do |f|
           .chat__messages__post__text
-            =f.text_field :text, :placeholder => "type a message", class: "chat__messages__post__text"
+            =f.text_field :text, :placeholder => "type a message", class: "chat__messages__post__text", id: "keyword"
             %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
-          = f.submit 'SENT', class: "chat__messages__post__buttom"
+          = f.submit 'SENT', class: "chat__messages__post__buttom", id: "submit"
 
