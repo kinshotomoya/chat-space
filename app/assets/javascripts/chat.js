@@ -1,15 +1,15 @@
 $(function(){
   $("#submit").on("click", function(e){
     e.preventDefault();
-    ajax();
+    sendInAjax();
     return false;
   });
 
 
-  function ajax(){
-    var input = $("#keyword").val();
+  function sendInAjax(){
+    var input = $("#js_chat_input").val();
     $.ajax({
-      url: './chats',
+      url: 'chats',
       type: 'POST',
       data: {
         text: input
@@ -18,11 +18,10 @@ $(function(){
     })
     .done(function(data){
       appendHtml(data);
-      $("#the_form")[0].reset();
+      $("#js_sending_form")[0].reset();
     })
     .fail(function(data){
       alert("メッセージを入力してください。");
-
     });
   }
 
