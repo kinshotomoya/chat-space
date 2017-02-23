@@ -36,7 +36,7 @@ $(function(){
                     <p class="chat__messages__contents__textbox__text">${ data.text }</p>
                   </div>
                 </div>`;//コントローラから送られて来た値を取り出すことでviewに表示させる
-    $(".chat__messages__contents").append(html);
+    $("#js__chat__messages__contents").append(html);
   }
 
 });
