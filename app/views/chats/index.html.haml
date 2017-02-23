@@ -27,7 +27,7 @@
       .chat__messages__post
         = form_for [@group, @chat], html: {id: 'js_sending_form', class: 'form'} do |f|
           .chat__messages__post__text
-            =f.text_field :text, :placeholder => "type a message", class: "chat__messages__post__text", id: "js_chat_input"
-            %i.chat__messages__post__text__icon.fa.fa-picture-o{"aria-hidden" => "true"}
+            =f.text_field :text, :placeholder => "type a message", id: "js_chat_input", class: "chat__messages__post__text__input"
+            %i.chat__messages__post__icon.fa.fa-picture-o{"aria-hidden" => "true"}
           = f.submit 'SENT', class: "chat__messages__post__buttom", id: "submit"
 

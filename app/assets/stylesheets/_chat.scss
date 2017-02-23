@@ -76,19 +76,23 @@
         padding-left: 10px;
         float: left;
         display: block;
-        &__icon{
-          float: right;
-          padding-right: 10px;
-          margin-top: 15px;
-          color: $black-color;
+        &__input{
+          height: 50px;
+          border: none;
+          width: 910px;
         }
       }
       &__buttom{
         line-height: 50px;
         padding:0px 25px;
-        margin-left: 15px;
         color: $white-color;
         float: right;
+      }
+      &__icon{
+        float: right;
+        margin-top: 15px;
+        padding-right: 15px;
+        color: $black-color;
       }
     }
   }
