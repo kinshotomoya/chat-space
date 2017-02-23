@@ -22,7 +22,7 @@
         %span.chat__group__member
           =user.name
     .chat__messages
-      .chat__messages__contents
+      #js__chat__messages__contents.chat__messages__contents
         =render partial: 'shared/chat', collection: @chats
       .chat__messages__post
         = form_for [@group, @chat], html: {id: 'js_sending_form', class: 'form'} do |f|
