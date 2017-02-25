@@ -30,9 +30,10 @@
     }
   }
   &__messages{
+    overflow: scroll;
     background-color: #FAFAFA;
     &__contents{
-      height: 100%;
+      min-height: 200vh;
       padding: 46px 40px 0px 40px;
       &__each{
         margin-bottom: 10px;
