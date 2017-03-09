@@ -1,31 +1,33 @@
-$(function(){
-
-
-  function sendInAjax(list, preInput){
+$(document).on('turbolinks:load', function(){
+//ページ変移した時に、リロードしなくてもJSが読み込まれるように！gemにtrbokinlsがデフォルトで書かれているので、
+//ページ変移した時にこのように書くことで、このファイルがtyなんと読み込まれる！
+  function searchUsersAjax(list, preInput){
     var input = $.trim($("#js-user-search-field").val());
-    $.ajax({
-      url: '/users/search',
-      type: 'GET',
-      data: {
-        name: input
-      },
-      dataType: 'json'
-    })
-    .done(function(data){
-      appendUsers(data, input, list, preInput);
-    })
-    .fail(function(data){
-      alert("グループを作成してください。");
+    if(input != preInput){//複数の文字を入力する時に、前回の文字で検索した結果が残っているのでそれと今回新たに入力した文字が違えば新しく検索し、表示させるように実装している。
+      $.ajax({
+        url: '/users/search',
+        type: 'GET',
+        data: {
+          name: input
+        },
+        dataType: 'json'
+      })
+      .done(function(data){
+        appendUsers(data, input, list, preInput);
+      })
+      .fail(function(data){
+        alert("グループを作成してください。");
 
-    });
+      });
+    }
   }
 
   function appendUsers(data, input, list, preInput){
-    if(input != preInput){
       $(".js-chat-group-list").remove();
         if (input.length !== 0 ){
           $(".chat-group-form__search").append(list)
           $.each(data, function(i, user){ //バッククォートで囲ってあげることによって式展開することができる！
+            console.log(data[i].id);
             var html = `<li id="user-search-result-${i}", class="chat-group-user">
                           <div class="chat-group-user__name">
                             ${ user.name }
@@ -42,7 +44,6 @@ $(function(){
            //一個一個のhtmlにfunctionを設定、追加ボタンを押すと下のメンバーの欄に追加された、この欄のリストから、削除される実装！
           });
         }
-    }
   }
 
   function addUsers(i, user, html){
@@ -80,7 +81,7 @@ $(function(){
     e.preventDefault();
     var list = "<ul class='js-chat-group-list'></ul>"; //検索されたメンバーをこの中に<li>の形で出力するが、文字を消した時にこの<ul>ごと消して一新するので、新たに検索したメンバーを出力させるために再度これをHTMLに追加させる必要がある。
     var preInput;
-    sendInAjax(list, preInput);
+    searchUsersAjax(list, preInput);
     return false;
   });
 
