@@ -24,7 +24,6 @@ $(document).on('turbolinks:load', function(){
 
   function appendUsers(data, input, list, preInput){
       $(".js-chat-group-list").remove();
-        if (input.length !== 0 ){
           $(".chat-group-form__search").append(list)
           $.each(data, function(i, user){ //バッククォートで囲ってあげることによって式展開することができる！
             console.log(data[i].id);
@@ -43,7 +42,6 @@ $(document).on('turbolinks:load', function(){
             addUsers(i, user, html);
            //一個一個のhtmlにfunctionを設定、追加ボタンを押すと下のメンバーの欄に追加された、この欄のリストから、削除される実装！
           });
-        }
   }
 
   function addUsers(i, user, html){
