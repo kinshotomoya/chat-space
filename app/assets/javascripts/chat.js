@@ -13,7 +13,8 @@ $(function(){
         dataType: 'json'
       })
       .done(function(data){
-        appendHtml(data);
+        var a = appendHtml(data);
+        $("#js__chat__messages__contents.chat__messages__contents").append(a);
         $("#js_sending_form")[0].reset();
       })
       .fail(function(data){
@@ -38,7 +39,8 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      appendHtml(data);
+      var a = appendHtml(data);
+      $("#js__chat__messages__contents.chat__messages__contents").append(a);
     })
     .fail(function(data){
       alert("ファイルを選択してください。");
@@ -54,7 +56,7 @@ $(function(){
                       <p class="chat__messages__contents__box__time">${ data.time }</p>
                     </div>
                       <img class="chat__messages__contents__textbox__text", src="${data.image.url}", height="200", width="200">
-                  </div>`;//コントローラから送られて来た値を取り出すことでviewに表示させる。dataにimageの値の有無で表示させるviewを開けている実装をしている。
+                  // </div>`;//コントローラから送られて来た値を取り出すことでviewに表示させる。dataにimageの値の有無で表示させるviewを開けている実装をしている。
     }else if(data.text != null){
       var html = `<div class="chat__messages__contents__each">
                     <div class="chat__messages__contents__box">
@@ -66,7 +68,7 @@ $(function(){
                     </div>
                   </div>`;//コントローラから送られて来た値を取り出すことでviewに表示させる。dataにimageの値の有無で表示させるviewを開けている実装をしている。
     }
-    $("#js__chat__messages__contents.chat__messages__contents").append(html);
+    return html;
   }
 
 
@@ -85,16 +87,17 @@ $(function(){
 
 
     setInterval(function(){
-      var input = $("#js_sending_form").val();
-      if (input.length != 0){
+      var input = $("#js_chat_input").length
+      if (input != 0){
         $.ajax({//chats_controllerのindexアクションとajaxで定期的に通信することで自動更新が行われる！
           type: 'GET',
           url: 'chats',
           dataType: 'json',
         })
         .done(function(data){
-          $(".chat__messages__contents__each").remove();
+          // $(".chat__messages__contents__each").remove();
           data.chats.forEach(function(e){//配列を一個一個取り出している！
+            console.log(e);
             appendHtml(e);
           })
         })
