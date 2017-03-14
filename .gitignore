@@ -11,3 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+.env
+/public/uploads
+
+
