@@ -6,14 +6,14 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @group.users << current_user
+    @group.users << current_user#<< curent_userすることによって、new.html.hamlでのuser_idsに自動で格納される
   end
 
 
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to group_chats_path(@group.id), notice: "グループ作成しました。"
+       redirect_to group_chats_path(@group.id), notice: "グループ作成しました。"
     else
       flash.now[:alert] = "再入力してください。"
       render :action => :new
@@ -34,7 +34,7 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, {:user_ids =>[]})
+    params.require(:group).permit(:name, {user_ids: []})
   end
 end
 

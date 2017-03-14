@@ -1,19 +1,31 @@
 .chat-group-form
   %h1 新規チャットグループ
-  = form_for(@group) do |f|
+  = form_for (@group), html: {id: 'new_chat_group', class: 'new_chat_group'} do |f|
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         .chat-group-form__label
           = f.label :グループ名
       .chat-group-form__field--right
-        = f.text_field :name, :placeholder => "グループ名を入力してください", class: "chat-group-form__input"
+        .chat-group-form__label
+          = f.text_field :name, :placeholder => "グループ名を入力してください", id: "chat_group_name", class: "chat-group-form__input"
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        .chat-group-form__label
+          = f.label :チャットメンバーを追加
+      .chat-group-form__field--right
+        .chat-group-form__search.clearfix
+          .js-chat-group-form
+            %input#js-user-search-field.chat-group-form__input.clearfix{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         .chat-group-form__label
           = f.label :チャットメンバー
       .chat-group-form__field--right
-        = f.collection_check_boxes :user_ids, User.all, :id, :name do |ff|
-          = ff.label {ff.check_box + ff.text}
+        #chat-group-users
+          #chat-group-users.chat-group-user.clearfix
+            =f.hidden_field "user_ids][", value: current_user.id, id: "users-value"
+            %span.chat-group-user__name
+              =current_user.name
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right

@@ -19,8 +19,9 @@
     }
   }
   &__contents{
+    overflow: scroll;
     padding: 0px 20px;
-    height: 100%;
+    min-height: 100vh;
     background-color: #2f3e51;
     &__box{
       &__name{

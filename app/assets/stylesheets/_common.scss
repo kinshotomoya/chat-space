@@ -1,12 +1,14 @@
-html, body, .contents, .group, .chat, .chat__messages{
-  height: 100%;
+.contents, .group, .chat, .chat__messages{
+  height: 100vh;
 }
 
 html{
-  overflow: auto;
+  overflow: scroll;
 
 }
 body{
+  min-height: 100vh;
+  overflow: scroll;
   position: relative;
   overflow: hidden;
   background-color: #fafafa;
