@@ -13,7 +13,6 @@ $(function(){
         dataType: 'json'
       })
       .done(function(data){
-        console.log(data.image);
         appendHtml(data);
         $("#js_sending_form")[0].reset();
       })
@@ -39,7 +38,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data.image); //ちゃんとイメージの値が取れているかコンソール上に表示させる。
       appendHtml(data);
     })
     .fail(function(data){
@@ -72,26 +70,6 @@ $(function(){
   }
 
 
-  function autoLoadPage(){
-    $.ajax({//chats_controllerのindexアクションとajaxで定期的に通信することで自動更新が行われる！
-      type: 'GET',
-      url: 'chats',
-      dataType: 'json',
-    })
-    .done(function(data){
-      console.log(data.chats); //これで配列の中の値を取り出している！
-      $(".chat__messages__contents__each").remove();
-      data.chats.forEach(function(e){//配列を一個一個取り出している！
-        console.log(e); //ちゃんと表示されているのかコンソールで表示！
-        appendHtml(e);
-      })
-    })
-    .fail(function(data){
-      console.log("通信失敗です！");
-    });
-  }
-
-
 
   $("#submit").on("click", function(e){
     e.preventDefault();
@@ -106,7 +84,24 @@ $(function(){
   })
 
 
-  setInterval(autoLoadPage, 5000);
+    setInterval(function(){
+      var input = $("#js_sending_form").val();
+      if (input.length != 0){
+        $.ajax({//chats_controllerのindexアクションとajaxで定期的に通信することで自動更新が行われる！
+          type: 'GET',
+          url: 'chats',
+          dataType: 'json',
+        })
+        .done(function(data){
+          $(".chat__messages__contents__each").remove();
+          data.chats.forEach(function(e){//配列を一個一個取り出している！
+            appendHtml(e);
+          })
+        })
+        .fail(function(data){
+        });
+      }
+    }, 5000);
 
 
 });
