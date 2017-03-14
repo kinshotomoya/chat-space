@@ -26,6 +26,9 @@ gem 'haml'
 gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'
 
 
 # Use ActiveModel has_secure_password
