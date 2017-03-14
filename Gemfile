@@ -23,7 +23,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
-gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
@@ -49,6 +48,7 @@ group :development, :test do
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'faker'
   gem 'pry-rails'
+  gem 'erb2haml'  #development環境だけで読み込まれるようにする。
 end
 
 group :development do
