@@ -27,6 +27,7 @@ class ChatsController < ApplicationController
 
 
   private
+
   def chat_params
     params.permit(:image, :text).merge(group_id: params[:group_id], user_id: current_user.id) #ストロングパラメータで、imageを許可してあげる。
   end
