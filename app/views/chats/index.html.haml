@@ -14,10 +14,10 @@
     .chat__group
       %p.chat__group__name
         =@group.name
-      =link_to edit_group_path(params[:group_id]) do
+      =link_to edit_group_path(@group.id) do
         .chat__group__edit Edit
       .chat__group__member
-      %span.chat__group__member member:
+      %span.chat__group__member member
       -@users.each do |user|
         %span.chat__group__member
           =user.name
@@ -28,6 +28,12 @@
         = form_for [@group, @chat], html: {id: 'js_sending_form', class: 'form'} do |f|
           .chat__messages__post__text
             =f.text_field :text, :placeholder => "type a message", id: "js_chat_input", class: "chat__messages__post__text__input"
-            %i.chat__messages__post__icon.fa.fa-picture-o{"aria-hidden" => "true"}
+            %label
+              =f.file_field :image, style: "display:none;", id: "js-file-field"
+              %i.chat__messages__post__icon.fa.fa-picture-o{"aria-hidden" => "true"}
           = f.submit 'SENT', class: "chat__messages__post__buttom", id: "submit"
 
+
+/labelで囲ってあげることで、ラベルの子要素のfile_fieldのデザインを編集することができる。この手法を使うとfile_fieldを図や自分な好きな絵に変更できる
+
+// chat.jsで、アイコンをクリックすれば、画像がjson形式で送られるように実装する。その際のparameterは、hidden_fieldで格納して、ボタンが押されたら発信するようにする！！！！
